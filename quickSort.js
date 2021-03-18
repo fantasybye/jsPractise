@@ -20,22 +20,21 @@ function quickSort(arr,left,right){
 function findPivotIndex(arr,left,right){
     let pivot = arr[left];
     let pIndex = left;
-    while (left <= right){
-        while (left <= right){
+    while (left < right){
+        while (left < right){
             if(arr[right] < pivot){
                 arr[left] = arr[right];
-                left++;
-                pIndex = left;
+                pIndex = right;
                 break;
             }else{
                 right--;
             }
         }
-        while (left <= right){
+        while (left < right){
             if(arr[left] > pivot){
                 arr[right] = arr[left];
-                right--;
-                pIndex = right;
+                // right--;
+                pIndex = left;
                 break;
             }else{
                 left++
@@ -45,6 +44,6 @@ function findPivotIndex(arr,left,right){
     arr[pIndex] = pivot;
     return pIndex;
 }
-let arr = [2,7,8,3,2]
-quickSort(arr,0,arr.length)
+let arr = [24,3,56,34,3,78,12,29,49,84,51,9,100]
+quickSort(arr,0,arr.length-1)
 console.log(arr)
