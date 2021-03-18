@@ -44,3 +44,10 @@ RegExp.prototype.clone = function() {
 var reg=new RegExp('/111/');
 var newReg=reg.clone();
 //newReg->  /\/111\//
+
+function PtoC(key){
+    if(key.includes('_')){
+        let keyArr = key.split('_')
+    }
+    
+}
